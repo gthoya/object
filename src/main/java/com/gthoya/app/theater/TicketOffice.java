@@ -13,11 +13,16 @@ public class TicketOffice {
 
     public TicketOffice(long amount, Ticket... tickets) {
         this.amount = amount;
+
+        if (tickets == null) {
+            return;
+        }
+
         this.tickets.addAll(Arrays.asList(tickets));
     }
 
     public boolean sellTicketTo(Audience audience) {
-        if (tickets.size() <= 0) {
+        if (tickets.isEmpty()) {
             return false;
         }
 
