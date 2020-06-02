@@ -22,7 +22,7 @@ public class TicketOffice {
         }
 
         long amount = audience.buy(getTicket());
-        if (amount == -1L) {
+        if (amount < 0L) {
             return false;
         }
 
