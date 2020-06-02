@@ -1,4 +1,7 @@
-package com.gthoya.app;
+package com.gthoya.app.client;
+
+import com.gthoya.app.ticket.Invitation;
+import com.gthoya.app.ticket.Ticket;
 
 public class Bag {
     private long amount;
@@ -14,26 +17,6 @@ public class Bag {
         this.amount = amount;
     }
 
-    public boolean hasInvitation() {
-        return invitation != null;
-    }
-
-    public boolean hasTicket() {
-        return ticket != null;
-    }
-
-    public void setTicket(Ticket ticket) {
-        this.ticket = ticket;
-    }
-
-    public void minusAmount(long amount) {
-        this.amount -= amount;
-    }
-
-    public void plusAmount(long amount) {
-        this.amount += amount;
-    }
-
     public long hold(Ticket ticket) {
         if (hasInvitation()) {
             setTicket(ticket);
@@ -45,5 +28,17 @@ public class Bag {
 
             return ticket.getFee();
         }
+    }
+
+    private boolean hasInvitation() {
+        return invitation != null;
+    }
+
+    private void setTicket(Ticket ticket) {
+        this.ticket = ticket;
+    }
+
+    private void minusAmount(long amount) {
+        this.amount -= amount;
     }
 }

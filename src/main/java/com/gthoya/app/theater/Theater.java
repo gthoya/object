@@ -1,4 +1,6 @@
-package com.gthoya.app;
+package com.gthoya.app.theater;
+
+import com.gthoya.app.client.Audience;
 
 public class Theater {
     private TicketSeller ticketSeller;
