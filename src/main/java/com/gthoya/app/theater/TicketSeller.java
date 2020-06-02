@@ -9,7 +9,7 @@ public class TicketSeller {
         this.ticketOffice = ticketOffice;
     }
 
-    public void sellTo(Audience audience) {
-        ticketOffice.sellTicketTo(audience);
+    public boolean sellTo(Audience audience) {
+        return ticketOffice.sellTicketTo(audience);
     }
 }

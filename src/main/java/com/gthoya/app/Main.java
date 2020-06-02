@@ -17,10 +17,14 @@ public class Main {
         TicketSeller ticketSeller = new TicketSeller(ticketOffice);
         Theater theater = new Theater(ticketSeller);
 
-        Audience audience1 = new Audience(new Bag(new Invitation(), 0L));
-        Audience audience2 = new Audience(new Bag(0L));
+        Audience audience1 = new Audience(new Bag(10L));
+        Audience audience2 = new Audience(new Bag(new Invitation(), 10L));
+        Audience audience3 = new Audience(new Bag(100L));
+        Audience audience4 = new Audience(new Bag(100L));
 
-        theater.enter(audience1);
-        theater.enter(audience2);
+        System.out.println(theater.enter(audience1));
+        System.out.println(theater.enter(audience2));
+        System.out.println(theater.enter(audience3));
+        System.out.println(theater.enter(audience4));
     }
 }

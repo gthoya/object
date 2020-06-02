@@ -9,7 +9,7 @@ public class Theater {
         this.ticketSeller = ticketSeller;
     }
 
-    public void enter(Audience audience) {
-        ticketSeller.sellTo(audience);
+    public boolean enter(Audience audience) {
+        return ticketSeller.sellTo(audience);
     }
 }

@@ -23,6 +23,10 @@ public class Bag {
 
             return 0L;
         } else {
+            if (amount < ticket.getFee()) {
+                return -1L;
+            }
+
             minusAmount(ticket.getFee());
             setTicket(ticket);
 

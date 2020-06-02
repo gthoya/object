@@ -16,11 +16,26 @@ public class TicketOffice {
         this.tickets.addAll(Arrays.asList(tickets));
     }
 
-    public void sellTicketTo(Audience audience) {
-        plusAmount(audience.buy(getTicket()));
+    public boolean sellTicketTo(Audience audience) {
+        if (tickets.size() <= 0) {
+            return false;
+        }
+
+        long amount = audience.buy(getTicket());
+        if (amount == -1L) {
+            return false;
+        }
+
+        plusAmount(amount);
+        removeTicket();
+        return true;
     }
 
     private Ticket getTicket() {
+        return tickets.get(0);
+    }
+
+    private Ticket removeTicket() {
         return tickets.remove(0);
     }
 
