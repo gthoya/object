@@ -22,9 +22,9 @@ public class Main {
         Audience audience3 = new Audience(new Bag(100L));
         Audience audience4 = new Audience(new Bag(100L));
 
-        System.out.println(theater.enter(audience1));
-        System.out.println(theater.enter(audience2));
-        System.out.println(theater.enter(audience3));
-        System.out.println(theater.enter(audience4));
+        System.out.println(theater.enter(audience1) + " " + ticketOffice.getAmount());
+        System.out.println(theater.enter(audience2) + " " + ticketOffice.getAmount());
+        System.out.println(theater.enter(audience3) + " " + ticketOffice.getAmount());
+        System.out.println(theater.enter(audience4) + " " + ticketOffice.getAmount());
     }
 }

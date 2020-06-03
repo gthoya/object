@@ -1,6 +1,5 @@
 package com.gthoya.app.theater;
 
-import com.gthoya.app.client.Audience;
 import com.gthoya.app.ticket.Ticket;
 
 import java.util.ArrayList;
@@ -10,6 +9,18 @@ import java.util.List;
 public class TicketOffice {
     private long amount;
     private List<Ticket> tickets = new ArrayList<>();
+
+    public long getAmount() {
+        return amount;
+    }
+
+    public Ticket getTicket() {
+        if (tickets.isEmpty()) {
+            return null;
+        }
+
+        return tickets.get(0);
+    }
 
     public TicketOffice(long amount, Ticket... tickets) {
         this.amount = amount;
@@ -21,23 +32,10 @@ public class TicketOffice {
         this.tickets.addAll(Arrays.asList(tickets));
     }
 
-    public boolean sellTicketTo(Audience audience) {
-        if (tickets.isEmpty()) {
-            return false;
-        }
-
-        long amount = audience.buy(getTicket());
-        if (amount < 0L) {
-            return false;
-        }
-
+    public boolean sellTicketTo(long amount) {
         plusAmount(amount);
         removeTicket();
         return true;
-    }
-
-    private Ticket getTicket() {
-        return tickets.get(0);
     }
 
     private Ticket removeTicket() {
