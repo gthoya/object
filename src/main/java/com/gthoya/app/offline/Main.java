@@ -1,12 +1,12 @@
-package com.gthoya.app;
+package com.gthoya.app.offline;
 
-import com.gthoya.app.client.Audience;
-import com.gthoya.app.client.Bag;
-import com.gthoya.app.theater.Theater;
-import com.gthoya.app.theater.TicketOffice;
-import com.gthoya.app.theater.TicketSeller;
-import com.gthoya.app.ticket.Invitation;
-import com.gthoya.app.ticket.Ticket;
+import com.gthoya.app.offline.client.Audience;
+import com.gthoya.app.offline.client.Bag;
+import com.gthoya.app.offline.theater.Theater;
+import com.gthoya.app.offline.theater.TicketOffice;
+import com.gthoya.app.offline.theater.TicketSeller;
+import com.gthoya.app.offline.ticket.Invitation;
+import com.gthoya.app.offline.ticket.Ticket;
 
 public class Main {
     public static void main(String[] args) {

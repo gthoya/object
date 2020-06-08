@@ -1,7 +1,7 @@
-package com.gthoya.app.theater;
+package com.gthoya.app.offline.theater;
 
-import com.gthoya.app.client.Audience;
-import com.gthoya.app.ticket.Ticket;
+import com.gthoya.app.offline.client.Audience;
+import com.gthoya.app.offline.ticket.Ticket;
 
 public class TicketSeller {
     private TicketOffice ticketOffice;

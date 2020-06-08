@@ -1,7 +1,7 @@
-package com.gthoya.app.client;
+package com.gthoya.app.offline.client;
 
-import com.gthoya.app.ticket.Invitation;
-import com.gthoya.app.ticket.Ticket;
+import com.gthoya.app.offline.ticket.Invitation;
+import com.gthoya.app.offline.ticket.Ticket;
 
 public class Bag {
     private long amount;

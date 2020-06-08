@@ -1,6 +1,6 @@
-package com.gthoya.app.theater;
+package com.gthoya.app.offline.theater;
 
-import com.gthoya.app.ticket.Ticket;
+import com.gthoya.app.offline.ticket.Ticket;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,7 +22,7 @@ public class TicketOffice {
         return tickets.get(0);
     }
 
-    public TicketOffice(long amount, Ticket... tickets) {
+    public TicketOffice(long amount, Ticket ... tickets) {
         this.amount = amount;
 
         if (tickets == null) {

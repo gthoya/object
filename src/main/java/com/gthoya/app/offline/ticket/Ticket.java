@@ -1,4 +1,4 @@
-package com.gthoya.app.ticket;
+package com.gthoya.app.offline.ticket;
 
 public class Ticket {
     private long fee;

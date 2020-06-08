@@ -1,6 +1,6 @@
-package com.gthoya.app.client;
+package com.gthoya.app.offline.client;
 
-import com.gthoya.app.ticket.Ticket;
+import com.gthoya.app.offline.ticket.Ticket;
 
 public class Audience {
     private Bag bag;

@@ -1,4 +1,4 @@
-package com.gthoya.app.ticket;
+package com.gthoya.app.offline.ticket;
 
 import java.time.LocalDateTime;
 
