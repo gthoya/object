@@ -1,6 +1,7 @@
 package com.gthoya.app.sign;
 
 import com.gthoya.app.sign.account.sub.Gender;
+import com.gthoya.app.sign.user.User;
 
 public class Main {
     public static void main(String[] args) {
