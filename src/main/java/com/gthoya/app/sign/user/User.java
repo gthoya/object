@@ -10,15 +10,13 @@ import com.gthoya.app.sign.terms.impl.UseTerms;
 public class User {
     private SignService signService = new SignService();
 
-    public void clickTerms(boolean useTerms, boolean privacyTerms, boolean locationTerms, boolean eventTerms) {
+    public boolean clickTerms(boolean useTerms, boolean privacyTerms, boolean locationTerms, boolean eventTerms) {
         signService = new SignService();
         signService.clickUseTerms(new UseTerms(useTerms));
         signService.clickPrivacyTerms(new PrivacyTerms(privacyTerms));
         signService.clickLocationTerms(new LocationTerms(locationTerms));
         signService.clickEventTerms(new EventTerms(eventTerms));
-    }
 
-    public boolean next() {
         return signService.isValidTerms();
     }
 
