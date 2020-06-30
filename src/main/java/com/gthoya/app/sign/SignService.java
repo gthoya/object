@@ -10,31 +10,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SignService {
-    private final List<Terms> terms;
+    private final List<Terms> termsList;
 
     public SignService() {
-        this.terms = new ArrayList<>();
+        this.termsList = new ArrayList<>();
     }
 
     public void clickUseTerms(Terms useTerms) {
-        terms.add(useTerms);
+        termsList.add(useTerms);
     }
 
     public void clickPrivacyTerms(Terms privacyTerms) {
-        terms.add(privacyTerms);
+        termsList.add(privacyTerms);
     }
 
     public void clickLocationTerms(Terms locationTerms) {
-        terms.add(locationTerms);
+        termsList.add(locationTerms);
     }
 
     public void clickEventTerms(Terms eventTerms) {
-        terms.add(eventTerms);
+        termsList.add(eventTerms);
     }
 
     public boolean isValidTerms() {
-        for (Terms terms : terms) {
-            if (terms.isRequired() && !terms.isChecked()) {
+        for (Terms terms : termsList) {
+            if (!terms.isRequiredCheck()) {
                 return false;
             }
         }

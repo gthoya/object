@@ -3,6 +3,7 @@ package com.gthoya.app.sign.terms.impl;
 import com.gthoya.app.sign.terms.Terms;
 
 public class UseTerms implements Terms {
+    private final boolean required = true;
     private final boolean check;
 
     public UseTerms(boolean check) {
@@ -11,11 +12,11 @@ public class UseTerms implements Terms {
 
     @Override
     public boolean isRequired() {
-        return true;
+        return this.required;
     }
 
     @Override
     public boolean isChecked() {
-        return check;
+        return this.check;
     }
 }

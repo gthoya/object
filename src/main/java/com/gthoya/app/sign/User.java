@@ -9,8 +9,7 @@ import com.gthoya.app.sign.terms.impl.UseTerms;
 public class User {
     private SignService signService = new SignService();
 
-    public void clickTerms(boolean useTerms, boolean privacyTerms,
-                           boolean locationTerms, boolean eventTerms) {
+    public void clickTerms(boolean useTerms, boolean privacyTerms, boolean locationTerms, boolean eventTerms) {
         signService = new SignService();
         signService.clickUseTerms(new UseTerms(useTerms));
         signService.clickPrivacyTerms(new PrivacyTerms(privacyTerms));
