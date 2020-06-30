@@ -2,10 +2,10 @@ package com.gthoya.app.sign.user;
 
 import com.gthoya.app.sign.account.sub.Gender;
 import com.gthoya.app.sign.service.SignService;
-import com.gthoya.app.sign.terms.impl.EventTerms;
-import com.gthoya.app.sign.terms.impl.LocationTerms;
-import com.gthoya.app.sign.terms.impl.PrivacyTerms;
-import com.gthoya.app.sign.terms.impl.UseTerms;
+import com.gthoya.app.sign.terms.ext.EventTerms;
+import com.gthoya.app.sign.terms.ext.LocationTerms;
+import com.gthoya.app.sign.terms.ext.PrivacyTerms;
+import com.gthoya.app.sign.terms.ext.UseTerms;
 
 public class User {
     private SignService signService = new SignService();

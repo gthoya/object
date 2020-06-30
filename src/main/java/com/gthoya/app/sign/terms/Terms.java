@@ -1,10 +1,23 @@
 package com.gthoya.app.sign.terms;
 
-public interface Terms {
-    boolean isRequired();
-    boolean isChecked();
+public class Terms {
+    private final boolean required;
+    private final boolean checked;
 
-    default boolean isRequiredCheck() {
+    public Terms(boolean required, boolean checked) {
+        this.required = required;
+        this.checked = checked;
+    }
+
+    private boolean isRequired() {
+        return required;
+    }
+
+    private boolean isChecked() {
+        return checked;
+    }
+
+    public boolean isRequiredCheck() {
         return !this.isRequired() || this.isChecked();
     }
 }
