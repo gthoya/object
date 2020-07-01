@@ -1,8 +1,10 @@
 package com.gthoya.app.sign.account;
 
 import com.gthoya.app.sign.account.sub.*;
+import com.gthoya.app.sign.terms.Terms;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class AccountInfo {
     private Account account;
@@ -11,6 +13,8 @@ public class AccountInfo {
     private Gender gender;
     private Email email;
     private Phone phone;
+
+    private List<Terms> termsList;
 
     public AccountInfo(Account account, String name, LocalDate birthday, Gender gender,
                    Phone phone) {
@@ -37,5 +41,9 @@ public class AccountInfo {
         }
 
         return true;
+    }
+
+    public void setTermsList(List<Terms> termsList) {
+        this.termsList = termsList;
     }
 }

@@ -60,6 +60,8 @@ public class SignService {
             return false;
         }
 
+        accountInfo.setTermsList(termsList);
+
         return true;
     }
 }
