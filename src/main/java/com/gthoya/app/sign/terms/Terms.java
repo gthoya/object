@@ -1,6 +1,6 @@
 package com.gthoya.app.sign.terms;
 
-public class Terms {
+public abstract class Terms {
     private final boolean required;
     private final boolean checked;
 
