@@ -9,15 +9,7 @@ public class Terms {
         this.checked = checked;
     }
 
-    private boolean isRequired() {
-        return required;
-    }
-
-    private boolean isChecked() {
-        return checked;
-    }
-
     public boolean isRequiredCheck() {
-        return !this.isRequired() || this.isChecked();
+        return !this.required || this.checked;
     }
 }
