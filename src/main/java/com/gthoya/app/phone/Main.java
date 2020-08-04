@@ -4,6 +4,7 @@ import com.gthoya.app.phone.call.Call;
 import com.gthoya.app.phone.money.Money;
 import com.gthoya.app.phone.phone.Phone;
 import com.gthoya.app.phone.policy.ext.NightlyDiscountPolicy;
+import com.gthoya.app.phone.policy.ext.RateDiscountablePolicy;
 import com.gthoya.app.phone.policy.ext.RegularPolicy;
 import com.gthoya.app.phone.policy.ext.TaxablePolicy;
 
@@ -29,5 +30,25 @@ public class Main {
         Phone phone3 = new Phone(new TaxablePolicy(0.05, new RegularPolicy(Money.wons(10), Duration.ofSeconds(10))));
         phone3.setCalls(Arrays.asList(call));
         System.out.println(phone3.calculateFee().getAmount());
+
+        Phone phone4 = new Phone(new RateDiscountablePolicy(Money.wons(10), new RegularPolicy(Money.wons(10), Duration.ofSeconds(10))));
+        phone4.setCalls(Arrays.asList(call));
+        System.out.println(phone4.calculateFee().getAmount());
+
+        Phone phone5 = new Phone(new TaxablePolicy(0.05, new NightlyDiscountPolicy(Money.wons(5), Money.wons(10), Duration.ofSeconds(10))));
+        phone5.setCalls(Arrays.asList(call));
+        System.out.println(phone5.calculateFee().getAmount());
+
+        Phone phone6 = new Phone(new RateDiscountablePolicy(Money.wons(10), new NightlyDiscountPolicy(Money.wons(5), Money.wons(10), Duration.ofSeconds(10))));
+        phone6.setCalls(Arrays.asList(call));
+        System.out.println(phone6.calculateFee().getAmount());
+
+        Phone phone7 = new Phone(new TaxablePolicy(0.05, new RateDiscountablePolicy(Money.wons(10), new RegularPolicy(Money.wons(10), Duration.ofSeconds(10)))));
+        phone7.setCalls(Arrays.asList(call));
+        System.out.println(phone7.calculateFee().getAmount());
+
+        Phone phone8 = new Phone(new RateDiscountablePolicy(Money.wons(10), new TaxablePolicy(0.05, new RegularPolicy(Money.wons(10), Duration.ofSeconds(10)))));
+        phone8.setCalls(Arrays.asList(call));
+        System.out.println(phone8.calculateFee().getAmount());
     }
 }
